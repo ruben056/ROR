@@ -1,0 +1,30 @@
+<h2>Article</h2>
+<%= render @article %>
+
+<h2>Comments</h2>
+<ul
+	<%= render @article.comments %>
+</ul>
+
+<h2>Add a comment:</h2>
+
+<%= form_for([@article, @article.comments.build]) do |f|  %>
+	<p>
+		<%= f.label :commenter  %></br>
+		<%= f.text_field :commenter %>
+	</p>
+	<p>
+		<%= f.label :body%></br>
+		<%= f.text_field :body%>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end%>
+
+
+<p>
+<%= link_to 'Edit article', edit_article_path(@article) %>  | <%= link_to 'Back to list', articles_path %>  
+</p>
+
+
