@@ -1,6 +1,6 @@
 ==To run==
 bin/rake db:migrate
-bin/rake server
+bin/rails server
 
 ==Good to now==
 Deleting and editing requires basis http authentication
