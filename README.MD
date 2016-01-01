@@ -1,8 +1,13 @@
-==To run==
-bin/rake db:migrate
+## To run
+```shell
+bin/rake db:migrate 
 bin/rails server
+```
+## Good to now : default security
+Deleting/editing requires basic http authentication:
+* The login pass is *dhh/secret*
 
-==Good to now==
-Deleting and editing requires basis http authentication
-See app/controllers/articles_controller.rb and app/controllers/comments_controller.rb
-The login pass is dhh/secret
+For implemention on this authentication see:
+
+* *app/controllers/articles_controller.rb*
+* *app/controllers/comments_controller.rb*
